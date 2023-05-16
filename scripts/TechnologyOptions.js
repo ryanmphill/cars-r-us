@@ -26,7 +26,7 @@ export const TechnologyOptions = async () => {
     const technologies = await response.json()
 
     let html = ""
-    html += '<select id="technology">'
+    html += '<select id="technology" class="dropdown">'
     html += '<option value="0">Select a technology package</option>'
     // Use map() to generate new array of strings
     const divStringArray = technologies.map(

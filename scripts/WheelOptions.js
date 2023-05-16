@@ -26,7 +26,7 @@ export const WheelOptions = async () => {
     const wheels = await response.json()
 
     let html = ""
-    html += '<select id="wheel">'
+    html += '<select id="wheel" class="dropdown">'
     html += '<option value="0">Select a wheel option</option>'
     // Use map() to generate new array of strings
     const divStringArray = wheels.map(

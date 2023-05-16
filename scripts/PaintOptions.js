@@ -27,7 +27,7 @@ export const PaintOptions = async () => {
     const paints = await response.json()
 
     let html = ""
-    html += '<select id="paint">'
+    html += '<select id="paint" class="dropdown">'
     html += '<option value="0">Select an exterior paint color</option>'
     // Use map() to generate new array of strings
     const divStringArray = paints.map(
