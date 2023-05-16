@@ -28,6 +28,14 @@ export const setWheelChoice = (chosenWheel) => {
     console.log(transientState)
 }
 
+// Reset the transient state
+export const resetTransientState = () => {
+    transientState.paintId = 0
+    transientState.interiorId = 0
+    transientState.technologyId = 0
+    transientState.wheelId = 0
+}
+
 ////////////////////////////////////////////////////////////////////////////////////
 // Export function to post the transient state to the api when button is clicked ///
 ////////////////////////////////////////////////////////////////////////////////////

@@ -3,6 +3,7 @@ import { OrderList } from "./OrderList.js"
 import { PaintOptions } from "./PaintOptions.js"
 import { PlaceOrderButton } from "./SubmitOrder.js"
 import { TechnologyOptions } from "./TechnologyOptions.js"
+import { resetTransientState } from "./TransientState.js"
 import { WheelOptions } from "./WheelOptions.js"
 
 
@@ -65,5 +66,6 @@ document.addEventListener(
     event => {
         console.log(`A new order has been placed. Regenerating HTML...`)
         render()
+        resetTransientState()
     }
 )

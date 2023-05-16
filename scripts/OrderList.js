@@ -9,7 +9,14 @@ export const OrderList = async () => {
     let html = ""
     const orderDivStringArray = orders.map(
         (order) => {
-            return `<div class="orderList--div">Order #${order.id} was placed</div>`
+            // Add all prices together from expanded orders objects
+            const totalPrice = order.paint.price + order.interior.price + order.technology.price + order.wheel.price
+            // To automatically format the number as currency
+            const formattedPrice = totalPrice.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD"
+            })
+            return `<div class="orderList--div">Order #${order.id} costs ${formattedPrice}</div>`
         }
     )
     html = orderDivStringArray.join("")
