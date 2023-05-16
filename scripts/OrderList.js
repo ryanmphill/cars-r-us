@@ -16,7 +16,7 @@ export const OrderList = async () => {
                 style: "currency",
                 currency: "USD"
             })
-            return `<div class="orderList--div">Order #${order.id} costs ${formattedPrice}</div>`
+            return `<div class="orderList--div">${order.paint.color} car with ${order.wheel.type} wheels, ${order.interior.type} interior, and the ${order.technology.package} for a total cost of ${formattedPrice}</div>`
         }
     )
     html = orderDivStringArray.join("")
