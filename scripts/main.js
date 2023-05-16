@@ -1,4 +1,5 @@
 import { InteriorOptions } from "./InteriorOptions.js"
+import { OrderList } from "./OrderList.js"
 import { PaintOptions } from "./PaintOptions.js"
 import { PlaceOrderButton } from "./SubmitOrder.js"
 import { TechnologyOptions } from "./TechnologyOptions.js"
@@ -15,6 +16,7 @@ const render = async () => {
     const technologyHTML = await TechnologyOptions()
     const wheelHTML = await WheelOptions()
     const buttonHTML = PlaceOrderButton()
+    const orderHTML = await OrderList()
 
     const container = document.querySelector("#container")
 
@@ -49,7 +51,7 @@ const render = async () => {
 
         <article class="orderList">
             <h2>Orders</h2>
-
+            ${orderHTML}
         </article>
     `
 
@@ -57,3 +59,11 @@ const render = async () => {
 }
 
 render()
+
+document.addEventListener(
+    "carOrderPlaced",
+    event => {
+        console.log(`A new order has been placed. Regenerating HTML...`)
+        render()
+    }
+)
