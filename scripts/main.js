@@ -1,3 +1,4 @@
+import { PaintOptions } from "./PaintOptions.js"
 
 
 
@@ -5,6 +6,7 @@
 
 const render = async () => {
     
+    const paintHTML = await PaintOptions()
 
     const container = document.querySelector("#container")
 
@@ -14,7 +16,7 @@ const render = async () => {
         <article class="choices">
             <section class="choices__paints options">
                 <h2>Paints</h2>
-                
+                ${paintHTML}
             </section>
 
             <section class="choices__interiors options">
@@ -39,9 +41,11 @@ const render = async () => {
 
         <article class="orderList">
             <h2>Orders</h2>
-            
+
         </article>
     `
 
     container.innerHTML = composedHTML
 }
+
+render()
