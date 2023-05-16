@@ -9,7 +9,7 @@ const handlePaintChoice = (event) => {
   // Check if the value of the item being changed is a metal
   if (event.target.id === "paint") {
       const chosenOption = event.target.value
-      setPaintChoice(parseInt(event.target.value))
+      setPaintChoice(parseInt(chosenOption))
   }
 }
 
