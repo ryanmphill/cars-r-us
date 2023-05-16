@@ -1,4 +1,7 @@
+import { InteriorOptions } from "./InteriorOptions.js"
 import { PaintOptions } from "./PaintOptions.js"
+import { TechnologyOptions } from "./TechnologyOptions.js"
+import { WheelOptions } from "./WheelOptions.js"
 
 
 
@@ -7,6 +10,9 @@ import { PaintOptions } from "./PaintOptions.js"
 const render = async () => {
     
     const paintHTML = await PaintOptions()
+    const interiorHTML = await InteriorOptions()
+    const technologyHTML = await TechnologyOptions()
+    const wheelHTML = await WheelOptions()
 
     const container = document.querySelector("#container")
 
@@ -21,17 +27,17 @@ const render = async () => {
 
             <section class="choices__interiors options">
                 <h2>Interiors</h2>
-                
+                ${interiorHTML}
             </section>
 
             <section class="choices__technologies options">
                 <h2>Technologies</h2>
-                
+                ${technologyHTML}
             </section>
 
             <section class="choices__wheels options">
                 <h2>Wheels</h2>
-                
+                ${wheelHTML}
             </section>
         </article>
 
