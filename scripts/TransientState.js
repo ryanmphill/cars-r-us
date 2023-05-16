@@ -27,3 +27,21 @@ export const setWheelChoice = (chosenWheel) => {
     transientState.wheelId = chosenWheel
     console.log(transientState)
 }
+
+////////////////////////////////////////////////////////////////////////////////////
+// Export function to post the transient state to the api when button is clicked ///
+////////////////////////////////////////////////////////////////////////////////////
+export const submitOrder = async () => {
+    // Define a postOptions object to specify a POST to the database
+    const postOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(transientState) // Turn the data into a string
+    }
+
+    // Send the transient state to your API
+    const response = await fetch("http://localhost:8088/orders", postOptions)
+
+}

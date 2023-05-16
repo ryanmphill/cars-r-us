@@ -1,5 +1,6 @@
 import { InteriorOptions } from "./InteriorOptions.js"
 import { PaintOptions } from "./PaintOptions.js"
+import { PlaceOrderButton } from "./SubmitOrder.js"
 import { TechnologyOptions } from "./TechnologyOptions.js"
 import { WheelOptions } from "./WheelOptions.js"
 
@@ -13,6 +14,7 @@ const render = async () => {
     const interiorHTML = await InteriorOptions()
     const technologyHTML = await TechnologyOptions()
     const wheelHTML = await WheelOptions()
+    const buttonHTML = PlaceOrderButton()
 
     const container = document.querySelector("#container")
 
@@ -42,7 +44,7 @@ const render = async () => {
         </article>
 
         <article class="order">
-            
+            ${buttonHTML}
         </article>
 
         <article class="orderList">
