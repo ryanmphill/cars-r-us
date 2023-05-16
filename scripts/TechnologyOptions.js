@@ -11,7 +11,7 @@ const handleTechnologyChoice = (event) => {
         const chosenOption = event.target.value
         setTechnologyChoice(parseInt(chosenOption))
     }
-  }
+}
 
 
 // Export a function that builds the html for the technology choices and listens for the change event
