@@ -4,7 +4,23 @@
 
 body {
     width: 100%;
-    background-color: rgb(247, 244, 241);
+    background-color: rgb(252, 250, 249);
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:rgba(44, 44, 44, 0.85);
+}
+
+.pageHeader {
+    display: flex;
+    column-gap: 0.25rem;
+}
+
+#carsName {
+    font-family: 'Chelsea Market', 'Rubik', sans-serif;
+    color: lightblue;
+    text-shadow: -1px 1px 2px rgb(18, 18, 18);
 }
 
 #container {
